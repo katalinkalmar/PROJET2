@@ -18,11 +18,54 @@
 <body>
     <i class="fa-solid fa-user"></i>
     <div class="main-container">
-        <header></header>
+        <header>
+        <!--Le header est un conteneur avec, à gauche un logo(image) et à droite une section contenant un menu de navigation-->
+        <div class="box">
+            <div><img src="images/logo/Booki.png" alt="Logo Booki"/></div>
+            <nav>
+                 <ul>
+                     <li><a href="#section-title Hébergements à Marseille"></a>Hébergements</li>
+                     <li><a href="#section-title Les plus populaires"></a>Activités</li>
+                  </ul>
+           </nav>
+        </header>
+           <!--Ici vient une section pour titre h1, formulaire de recherche, menu navigation et titre H5-->
+           <section>
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <h3>En plein centre-ville ou en pleine nature</h3>
+<!-- Ici vient le formulaire de recherche-->
+<i class="fa-solid fa-location-dot"></i>
+<form method="get" action="">
+    <p>
+        <label for="rechercher">Rechercher:</label>
+        <input type="search" name="rechercher" id="rechercher" placeholder="Marseille, France" size="" maxlength="">
+    </p>
+</form>
+<nav>
+    <h4>Filtres</h4>
+    <ul>
+        <!--insérer logo économique-->
+        <li>Economique</li>
+        <!--insérer logo familial-->
+        <li>Familial</li>
+        <!--insérer logo romantique-->
+        <li>Romantique</li>
+    </ul>
+</nav>
+              <h5> Plus de 500logements sont disponibles dans cette ville</h5>
+
+           </section>
+    
         <main>
+    <!--Ici il faut une div qui englobe le main pour rendre le site responsive. Je vais l'appeler div id toutes sections-->
+         <div id="toutes sections">
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
-
+                    <div class="hebergements-title">
+                        <h2 class="section-title">Hébergements à Marseille</h2>
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                    </div>
+        </div>
                 </section>
                 <section class="populaires">
                     <div class="populaires-title">
@@ -90,6 +133,7 @@
                     </div>
                 </section>
             </div>
+          </div>
         </main>
         <footer></footer>
     </div>
