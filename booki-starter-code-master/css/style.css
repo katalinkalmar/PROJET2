@@ -6,7 +6,7 @@
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+    --filter-bg-color: #DEEBFF
 }
 
 .fa-solid {
@@ -24,6 +24,11 @@ body {
     padding: 0 50px;
     box-sizing: border-box;
 }
+/* container avec toutes les sections du main*/
+.toutes-sections-container {
+    display: flex;
+    flex-direction: column;
+}
 
 a {
     color: inherit;
@@ -33,6 +38,42 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+}
+/* J'insère le Css correspondant au header */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+  .logo-booki {
+    width: 61.09px;
+    height: auto;
+    color: #0065FC;
+  }
+
+  .nav-box {
+    display: flex;
+   flex-direction: row;}
+
+
+   .searchbar {
+    width: 550px;
+    height: 49px;
+    }
+    .fa-solid fa-location-dot {
+        color: #000000;
+
+}
+
+.rectangle-filtres {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 10px;
 }
 
 .card {
