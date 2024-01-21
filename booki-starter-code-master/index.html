@@ -15,23 +15,34 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
+
+
 <body>
     <i class="fa-solid fa-user"></i>
+    <!--Le header est un conteneur: à gauche un logo et à droite un menu de navigation-->
+    <header>
+        <div class="header-container">
+
+            <div class="logobox">
+                <img class="logo-Booki" src="images/logo/Booki.png" alt="Logo Booki" width="61.09" height="19" />
+            </div>
+
+            <nav class="menu-header">
+                <div class="bouton-hebergement">
+                    <!--La div suivante correspondra à la bordure bleue qui sera un rectangle de de pixels d'épaisseur-->
+                    <div style="height: 2px;"> </div>
+                    <a href="#section-title-hebergement">Hébergements</a>
+                </div>
+                <div class="bouton-activites">
+                    <a href="#section-title-activites">Activités</a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
 
     <div class="main-container">
-        <div class="header-container">
-            <!--Le header est un conteneur: à gauche un logo et à droite un menu de navigation-->
-            <div><img class="logo-Booki" src="images/logo/Booki.png" alt="Logo Booki" /></div>
-            <div class="nav-box">
-                <ul class="ul-box">
-                    <li><a href="#section-title-hebergement">Hébergements</a><button
-                            id="hebergement">Hébergements</button></li>
 
-                    <li><a href="#section-title-activites">Activités</a><button id="activites">Activités</button></li>
-                </ul>
-
-            </div>
-        </div>
 
         <!--Ici vient une section de Infogroup qui inclut du Titre H1 jusqà i Plus de 500 logements-->
         <section class="infogroup">

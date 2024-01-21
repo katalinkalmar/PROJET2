@@ -15,6 +15,7 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -34,98 +35,109 @@ a {
     margin: 0;
     font-size: 22px;
 }
+
 /* J'insère le Css correspondant au header */
 
 .header-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    gap: 934.91 ;
+    gap: 934.91;
     width: 1440px;
     margin: auto;
 }
 
 .logo-booki {
     width: 61.09px;
-    height: 19 ;
+    height: 19;
     color: #0065FC;
-  }
-
-  .nav-box {
-    display: flex;
-   flex-direction: row;
-   gap: 68px; }
-
-.ul-box {
-    width: 244px;
-    height: 35px;
-    display:flex;
-    flex-direction:row;
-    justify-content: flex-end;
-    gap: 69px;
 }
+
+.logobox {
+    padding: 30px 50px 30px 50px;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: row;
+    gap: 68px;
+    font-size: 16px;
+}
+
+.bouton-hebergement:hover {
+    color: #0065FC;
+
+}
+
+.bouton-hebergement {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
 
 #hebergement {
     width: 112px;
-    height: 19px ;
-font-size:  16px;
-color: #0065FC;
- font-size: 16px;
- font-family: Raleway;
- font-weight: 400;
- word-wrap: break-word;
+    height: 19px;
+    font-size: 16px;
+    color: #0065FC;
+    font-size: 16px;
+    font-family: Raleway;
+    font-weight: 400;
+    word-wrap: break-word;
 }
 
 #activites {
-    width: 63px ;
+    width: 63px;
     height: 19;
- font-size: 16px;
- color:black
+    font-size: 16px;
+    color: black
 }
 
 .infogroup {
-width: 1340px;
-height: 281px;
-flex-direction: column;
-gap: 35px;
-/* il y a 3 rectangles de la même hauteur et un quatrième plus étroit en bas de la boite infogroup*/
+    width: 1340px;
+    height: 281px;
+    flex-direction: column;
+    gap: 35px;
+    /* il y a 3 rectangles de la même hauteur et un quatrième plus étroit en bas de la boite infogroup*/
 }
+
 .container-titre {
-  width: 1340px;
-  height: 26px;
-  color: black;
-font-size: 22px;
-font-family: Raleway;
-font-weight: 700;
-word-wrap: break-word
+    width: 1340px;
+    height: 26px;
+    color: black;
+    font-size: 22px;
+    font-family: Raleway;
+    font-weight: 700;
+    word-wrap: break-word
 }
 
 .container-sous-titre {
     width: 1340px;
     height: 19px;
     color: black;
-  font-size: 16px;
-  font-family: Raleway;
-  font-weight: 40000;
-  word-wrap: break-word
-
+    font-size: 16px;
+    font-family: Raleway;
+    font-weight: 40000;
+    word-wrap: break-word
 }
 
 
 
 /* barre de recherche */
-   .searchbar {
+.searchbar {
     width: 550px;
     height: 49px;
-    }
-    .fa-solid fa-location-dot {
-        color: #000000;
+}
+
+.fa-solid fa-location-dot {
+    color: #000000;
 
 }
+
 /*Filtres économique, familial, romantique et nos pépites*/
 .filter-bar {
-   width:758 px; 
+    width: 758 px;
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -140,6 +152,7 @@ word-wrap: break-word
     display: flex;
     flex-direction: column;
 }
+
 .card {
     background-color: white;
     border-radius: 20px;
