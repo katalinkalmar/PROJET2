@@ -53,12 +53,16 @@ a {
 
 .logo-booki {
     width: 61.09px;
-    height: 19;
+
+    display: flex;
     color: #0065FC;
 }
 
 .logobox {
     padding: 30px 50px 30px 50px;
+    width: 161.09;
+    height: 79;
+    display: flex;
     box-sizing: border-box;
     object-fit: contain;
 }
@@ -267,7 +271,7 @@ Début du main*/
     line-height: normal;
 }
 
-
+/* Ici vient le hover pouur les filtres */
 
 .bouton-filtre:hover {
     display: flex;
