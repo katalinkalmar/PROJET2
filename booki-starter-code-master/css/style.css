@@ -47,14 +47,13 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 934.91;
-    width: 1440px;
+
+    max-width: 1440px;
     margin: auto;
 }
 
 .logo-booki {
     width: 61.09px;
-
     display: flex;
     color: #0065FC;
 }
@@ -88,7 +87,7 @@ a {
 }
 
 
-#bluebar {
+.bluebar {
     width: auto;
     height: 2px;
     box-sizing: border-box;
@@ -137,7 +136,7 @@ Début du main*/
 
 /* Dans cette section Infogroup il y a 3 rectangles de la même hauteur et un quatrième plus étroit en bas de la boite:  */
 .infogroup {
-    width: 1340px;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -157,31 +156,31 @@ Début du main*/
 
 .gros-titre {
     display: flex;
-    height: 26px;
+    height: auto;
 }
 
 .sous-titre {
     display: flex;
-    height: 19px;
+    height: 1em;
 
 }
 
 #titre {
     color: black;
-    height: 26px;
+
     font-size: 22px;
     font-family: Raleway;
     font-weight: 700;
-    margin: none;
+    margin: 0;
 }
 
 #sous-titre {
     color: black;
-    height: 19px;
+
     font-size: 16px;
     font-family: Raleway;
     font-weight: 400;
-    margin: none;
+    margin: 0;
 
 }
 
@@ -346,28 +345,32 @@ Début du main*/
 
 .hotels-premiere-ligne {
     width: 100%;
-    display: flex;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .hotels-deuxieme-ligne {
     width: 100%;
-    display: flex;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-direction: row;
     justify-content: space-between;
 }
 
 
 .hebergements-cards .card {
+
     display: flex;
     flex-direction: column;
     margin-top: 33px;
 }
 
 .hebergements-cards img {
-    width: 250px;
-
+    width: 100%;
     height: 124px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -458,26 +461,31 @@ Début du main*/
     padding: 30px;
 }
 
-
+/* lignes 466 la hauteur auto sert à réduire la ha hauteur de la boite qui contient les cartes*/
 .activites-marseille-cards {
-    display: flex;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px
 }
+
+/* ligne 478 la hauteur 100 % indique aux cartes de prendre tout l'espace disponible*/
 
 .card-activite {
     background-color: white;
     border-radius: 20px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-    height: 440px;
+    height: 100%;
 }
 
 
 .activites-card-content {
+    font-size: 0.75em;
     padding: 0 20px;
 }
 
 .card-activite img {
-    width: 300px;
+    width: 100%;
     height: 380px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -490,24 +498,20 @@ Début du main*/
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-
     gap: 15px;
     background: #F2F2F2;
-    max-width: 1440px;
+    max-width: 90vw;
     width: 1340px;
     margin: auto;
-    font-size: 16px;
-    font-weight: 600;
-
+    font-size: 0.75em;
+    font-weight: 400;
 }
-
-
 
 
 .footer-section-title {
     color: #000;
     font-family: Raleway;
-    font-size: 18px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 700;
 }
@@ -517,9 +521,7 @@ footer {
     flex: 1;
     flex-direction: column;
     gap: 15px;
-    font-size: 16px;
-    font-family: Raleway;
-    font-weight: 400;
+
     padding: 20px;
 }
 
@@ -528,9 +530,7 @@ footer {
     flex: 1;
     flex-direction: column;
     gap: 15px;
-    font-size: 16px;
-    font-family: Raleway;
-    font-weight: 400;
+
     padding: 20px;
 }
 
@@ -539,9 +539,7 @@ footer {
     flex: 1;
     flex-direction: column;
     gap: 15px;
-    font-size: 16px;
-    font-family: Raleway;
-    font-weight: 400;
+
     padding: 20px;
 }
 
@@ -552,6 +550,8 @@ footer {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+/* @media screen and (min-width: 1024 px) correspond à ce qui précède
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
@@ -584,9 +584,245 @@ footer {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    .activites-card-content {
+        font-size: 0, 75em;
+    }
+
+    .card-activite img {
+        width: 100%;
+        height: 20vw;
+
+    }
+
+    footer {
+        width: 100%;
+
+        margin: 0 50px;
+    }
+
+
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.875rem;
+    }
+
+    .header-container {
+
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+
+    .bouton-activites {
+        width: 100%;
+        flex-direction: column-reverse;
+
+    }
+
+    .bouton-hebergement {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .bouton-hebergement a {
+        margin: auto;
+    }
+
+    .bouton-activites a {
+        margin: auto;
+    }
+
+    .menu-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+
+
+    .infogroup {
+        width: 23rem;
+        height: 27rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0rem 1.25rem;
+        align-items: flex-start;
+        gap: 2.19rem;
+        align-self: stretch;
+
+    }
+
+    /* j'inverse la section hebergement avec la section populaire avec column-reverse*/
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    /* ce qui suit je l'ai mis en colonne mais il ne veut pas s'y mettre*/
+    .populaires {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        height: 35.5rem;
+        padding: 1.875rem 1.25rem;
+        gap: 0.9375rem;
+        margin: auto;
+    }
+
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 33px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .populaires-cards img {
+        width: 6.9rem;
+        height: 9.12rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+
+    .populaires-cards .card-content {
+        width: 67%;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .populaires-cards .card-title {
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    .populaires-cards .card-subtitle {
+        margin: 0;
+    }
+
+    .populaires-cards .card-rating {
+        margin-bottom: 5px;
+    }
+
+    /****** Hebergements ***********/
+    .hebergements {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+
+    }
+
+
+    .hebergements-cards .card {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .hebergements-cards img {
+        width: auto;
+        height: 124px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .hebergements-cards .card-content {
+        width: 100%;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .hebergements-cards .card-title {
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    .hebergements-cards .card-subtitle {
+        margin: 0;
+    }
+
+    .hebergements-cards .card-rating {
+        margin-bottom: 5px;
+    }
+
+    .hebergements-afficher-plus h3 {
+        width: 100%;
+        height: auto;
+        font-family: Raleway;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+
+    /****** Activites ***********/
+    .activites-marseille {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 315px;
+        gap: 1.875rem;
+        padding: 1.875rem;
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+
+    .activites-marseille-cards {
+        height: 8.8125rem;
+        width: auto;
+        display: flex;
+        gap: 30px
+    }
+
+    /* ligne  la hauteur 100 % indique aux cartes de prendre tout l'espace disponible*/
+
+    .card-activite {
+        background-color: white;
+        border-radius: 1.25rem;
+        box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.10);
+    }
+
+
+    .activites-card-content {
+        font-size: 0.75em;
+        padding: 0 20px;
+        width: 100%;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .card-activite img {
+        width: auto;
+        height: 141px;
+        border: radius 1.25rem;
+        object-fit: cover;
+    }
+
 }
