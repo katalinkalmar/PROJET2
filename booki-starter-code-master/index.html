@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Booki</title>
     <script src="https://kit.fontawesome.com/e156b4855d.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +49,7 @@
 
             <!--Ici vient une section Infogroup qui inclut le titre H1 jusquà: i Plus de 500 logements-->
             <section class="infogroup">
-                <!--Ici vient une div qui englobe le titre h1 et le sous-titre h4 -->
+                <!--Ici vient un container qui englobe le titre h1 et le sous-titre h4 -->
                 <div class="container-titre">
                     <div class="gros-titre">
                         <h1 id="titre">Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -69,10 +68,11 @@
                                 placeholder="Marseille, France"></div>
                         <!--Ici je place une div dans laquelle je mets le bouton rechercher-->
                         <div id="bouton-rechercher"><label for="rechercher">Rechercher</label></div>
+                        <!--le bouton rechercher mobile est placé mais apparaitra seulement en format mobile-->
                         <div id="bouton-rechercher-mobile"><i class="fa-solid fa-magnifying-glass"></i></div>
                     </div>
-
                 </form>
+
                 <!--Ici vient la barre des filtres-->
                 <nav>
                     <div class="filter-bar">
@@ -85,17 +85,16 @@
                         </div>
                     </div>
                 </nav>
+
                 <!--Ici vient l'info-barre-->
                 <div class="infobar">
                     <i class="fa-solid fa-circle-info"></i>
                     <h5> Plus de 500 logements sont disponibles dans cette ville
                     </h5>
                 </div>
-
             </section>
 
-
-            <!-- Contenu pour la section "hebergements" ici -->
+            <!-- Contenu pour la section "hebergements" ici. D'abord une div qui contient les deux grandes boites: hébergements et populaires -->
             <div class="hebergements-and-populaires">
                 <section class="hebergements">
                     <h2 class="section-title">Hébergements à Marseille</h2>
@@ -320,6 +319,7 @@
                 <div class="activites-marseille-title">
                     <h2 class="section-title">Activités à Marseille</h2>
                 </div>
+                
                 <!--Ici vient une div qui englobe les 4 cartes concernant les activités à Marseille-->
                 <div class="activites-marseille-cards">
 
@@ -361,7 +361,6 @@
     <!--Footer ici-->
     <footer>
 
-        <!--Je rajoute une class footer section commune aux trois sections du footer-->
         <a href="#">
             <section class="a-propos">
                 <div class="a-propos-title">
@@ -393,7 +392,7 @@
         </a>
 
     </footer>
-
+<!--Fin du footer-->
 
 </body>
 
